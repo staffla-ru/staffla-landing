@@ -40,6 +40,24 @@
     font-weight: 800;
     letter-spacing: 0.5px;
   }
+  .logo-desktop { display: block; line-height: 0; }
+  .logo-mobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--black);
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
+    font-size: 22px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 768px) {
+    .logo-desktop { display: none; }
+    .logo-mobile { display: flex; }
+  }
 
   /* Buttons */
   .btn {
@@ -193,7 +211,8 @@
 
 <header>
   <div class="container">
-    <span class="logo">Staffla</span>
+    <a href="#" class="logo-desktop"><img src="Staffla.png" alt="Staffla" style="height: 36px;"></a>
+    <div class="logo-mobile" aria-label="Staffla">S</div>
   </div>
 </header>
 
@@ -225,9 +244,9 @@
         <p>Смены в твоём районе Воронежа — не трать время на дорогу.</p>
       </div>
       <div class="card">
-        <span class="icon">📝</span>
-        <h3>Без опыта и документов</h3>
-        <p>Работа без опыта в Воронеже — начни зарабатывать прямо сегодня.</p>
+        <span class="icon">🎁</span>
+        <h3>Бонус в рублях за каждую смену</h3>
+        <p>Получай денежный бонус за каждую отработанную смену</p>
       </div>
       <div class="card">
         <span class="icon">📅</span>
